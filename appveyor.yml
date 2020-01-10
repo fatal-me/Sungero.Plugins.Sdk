@@ -8,5 +8,5 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: src\Sungero.Plugins.Sdk\bin\Release\*.nupkg
+- path: src\bin\Release\*.nupkg
   name: nuget package
