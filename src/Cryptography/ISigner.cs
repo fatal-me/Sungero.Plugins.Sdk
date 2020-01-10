@@ -47,5 +47,12 @@ namespace Sungero.Cryptography.Shared
     /// <param name="signature">Подпись.</param>
     /// <returns>Усиленная подпись.</returns>
     byte[] EnhanceSignature(byte[] signature);
+
+    /// <summary>
+    /// Расширить подписываемые атрибуты.
+    /// </summary>
+    /// <param name="encodedSigningAttributes">Подписываемые атрибуты.</param>
+    /// <returns>Расширенные подписываемые атрибуты .</returns>
+    byte[] EnhanceSigningAttributes(byte[] encodedSigningAttributes);
   }
 }
