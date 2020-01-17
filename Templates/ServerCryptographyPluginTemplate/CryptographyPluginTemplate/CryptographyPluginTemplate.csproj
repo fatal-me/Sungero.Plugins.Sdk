@@ -50,7 +50,11 @@
     <Compile Include="Signer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Plugin.targets">
+      <Link>Plugin.targets</Link>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Plugin.targets" />
 </Project>
