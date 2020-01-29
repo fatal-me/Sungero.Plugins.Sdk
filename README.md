@@ -4,4 +4,10 @@
 [![NuGet](https://img.shields.io/nuget/v/sungero.plugins.sdk.svg)](https://www.nuget.org/packages/Sungero.Plugins.Sdk/)
 
 SDK плагинов расширения к системе DirectumRX.  
+
+## Модуль **Cryptography**:
+* **HashAlgorithmWrapper** Предоставляет удобные методы для доступа к алгоритму хэширования.
+* **ICryptographyPlugin** Содержит контракт для создания плагина криптографии.
+* **ISigner** Содержит контракт для создания класса подписания.
+
 См. также [шаблон проекта плагина подписания](https://github.com/DirectumCompany/Sungero.Plugins.Templates).
