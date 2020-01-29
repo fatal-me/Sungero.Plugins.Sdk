@@ -9,13 +9,13 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Configurations>Debug;Release</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <Company>DIRECTUM Company</Company>
     <Authors>DIRECTUM</Authors>
     <Description>Create .net extension plugins for Sungero.</Description>
-    <Copyright>© DIRECTUM Company, 2019</Copyright>
+    <Copyright>© DIRECTUM Company, 2020</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>sungero plugins sdk</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
