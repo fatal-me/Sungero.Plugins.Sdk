@@ -1,6 +1,6 @@
 # Sungero.Plugins.Sdk
 
-**Sungero.Plugins.Sdk** Инструмент для создания плагинов расширения к системе Sungero.
+**Sungero.Plugins.Sdk** Инструмент для создания плагинов расширения к системе DirectumRX.
 
 ## Лицензия
 
