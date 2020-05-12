@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Sungero.Plugins.Sdk;
@@ -55,8 +56,9 @@ namespace Sungero.Cryptography.Shared
     /// Выполнить проверку сертификата.
     /// </summary>
     /// <param name="certificate">Сертификат.</param>
+    /// <param name="verificationDateTime">Время на которое осуществляется проверка.</param>
     /// <returns>Список ошибок по итогам проверки сертификата.</returns>
-    IEnumerable<string> ValidateCertificate(X509Certificate2 certificate);
+    IEnumerable<string> ValidateCertificate(X509Certificate2 certificate, DateTime verificationDateTime);
 
     /// <summary>
     /// Выполнить проверку подписи.
