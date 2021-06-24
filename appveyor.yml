@@ -2,11 +2,11 @@ version: 1.0.{build}
 image: Visual Studio 2017
 configuration: Release
 init:
-- cmd: git config --global core.autocrlf false
+  - cmd: git config --global core.autocrlf false
 before_build:
-- cmd: nuget restore "src\Sungero.Plugins.Sdk.sln"
+  - cmd: nuget restore "src\Sungero.Plugins.Sdk.sln"
 build:
   verbosity: minimal
 artifacts:
-- path: src\bin\Release\*.nupkg
-  name: nuget package
+  - path: src\bin\Release\*.nupkg
+    name: nuget package
