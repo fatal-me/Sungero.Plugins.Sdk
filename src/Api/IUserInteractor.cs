@@ -18,5 +18,15 @@ namespace Sungero.Plugins.Sdk
     /// <param name="isCacheValueUsed">Использовано значение из кеша.</param>
     /// <returns>True, если ПИН-код успешно получен, иначе - false.</returns>
     bool GetPin(Guid pluginId, string thumbprint, bool isForced, bool showWrongPinHint, out string pin, out bool isCacheValueUsed);
+
+    /// <summary>
+    /// Получить OTP от пользователя.
+    /// </summary>
+    /// <param name="message">Локализованное сообщение, отображаемое пользователю.</param>
+    /// <param name="showTextEdit">Показать поле ввода OTP.</param>
+    /// <param name="showWrongOtpHint">Показать хинт, что предыдущий введенный OTP был неверен.</param>
+    /// <param name="otp">OTP.</param>
+    /// <returns>True, если OTP успешно получен, иначе - false.</returns>
+    bool GetOtp(string message, bool showTextEdit, bool showWrongOtpHint, out string otp);
   }
 }

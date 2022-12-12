@@ -28,7 +28,7 @@ namespace Sungero.Plugins.Sdk
     /// <returns>Токен OAuth 2.0.</returns>
     public static string CreateToken(Guid pluginId)
     {
-      if (internalTokenProvider is null)
+      if (internalTokenProvider?.Value is null)
       {
         throw new ArgumentException("No token provider.");
       }
