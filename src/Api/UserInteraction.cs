@@ -39,13 +39,13 @@ namespace Sungero.Plugins.Sdk
     }
 
     /// <summary>
-    /// Получить OTP от пользователя.
+    /// Получить одноразовый пароль от пользователя.
     /// </summary>
     /// <param name="message">Локализованное сообщение, отображаемое пользователю.</param>
-    /// <param name="showTextEdit">Показать поле ввода OTP.</param>
-    /// <param name="showWrongOtpHint">Показать хинт, что предыдущий введенный OTP был неверен.</param>
-    /// <param name="otp">OTP.</param>
-    /// <returns>True, если OTP успешно получен, иначе - false.</returns>
+    /// <param name="showTextEdit">Показать поле ввода одноразового пароля.</param>
+    /// <param name="showWrongOtpHint">Показать хинт, что предыдущий введенный одноразовый пароль был неверен.</param>
+    /// <param name="otp">Одноразовый пароль.</param>
+    /// <returns>True, если одноразовый пароль успешно получен, иначе - false.</returns>
     public static bool GetOtpFromUser(string message, bool showTextEdit, bool showWrongOtpHint, out string otp)
     {
       CheckInteractor();
