@@ -20,13 +20,13 @@ namespace Sungero.Plugins.Sdk
     bool GetPin(Guid pluginId, string thumbprint, bool isForced, bool showWrongPinHint, out string pin, out bool isCacheValueUsed);
 
     /// <summary>
-    /// Получить одноразовый пароль от пользователя.
+    /// Получить одноразовый пароль (OTP) от пользователя.
     /// </summary>
-    /// <param name="message">Локализованное сообщение, отображаемое пользователю.</param>
-    /// <param name="showTextEdit">Показать поле ввода одноразового пароля.</param>
-    /// <param name="showWrongOtpHint">Показать хинт, что предыдущий введенный одноразовый пароль был неверен.</param>
+    /// <param name="message">Сообщение, отображаемое пользователю.</param>
+    /// <param name="otpLabel">Заголовок поля ввода OTP (если указана пустая строка, то поле ввода не показывается).</param>
+    /// <param name="hint">Подсказка, отображаемая пользователю (например, если ранее был введен неверный OTP).</param>
     /// <param name="otp">Одноразовый пароль.</param>
     /// <returns>True, если одноразовый пароль успешно получен, иначе - false.</returns>
-    bool GetOtp(string message, bool showTextEdit, bool showWrongOtpHint, out string otp);
+    bool GetOtp(string message, string otpLabel, string hint, out string otp);
   }
 }
