@@ -33,10 +33,33 @@ namespace Sungero.Plugins.Sdk
     /// <returns>True, если ПИН-код успешно получен, иначе - false.</returns>
     public static bool GetPinFromUser(Guid pluginId, string thumbprint, bool isForced, bool showWrongPinHint, out string pin, out bool isCacheValueUsed)
     {
-      if (userInteractor == null)
-        throw new NullReferenceException("UserInteractor has no implementation!");
-      
+      CheckInteractor();
+
       return userInteractor.Value.GetPin(pluginId, thumbprint, isForced, showWrongPinHint, out pin, out isCacheValueUsed);
+    }
+
+    /// <summary>
+    /// Получить одноразовый пароль (OTP) от пользователя.
+    /// </summary>
+    /// <param name="message">Сообщение, отображаемое пользователю.</param>
+    /// <param name="otpLabel">Заголовок поля ввода OTP (если указана пустая строка, то поле ввода не показывается).</param>
+    /// <param name="hint">Подсказка, отображаемая пользователю (например, если ранее был введен неверный OTP).</param>
+    /// <param name="otp">Одноразовый пароль.</param>
+    /// <returns>True, если одноразовый пароль успешно получен, иначе - false.</returns>
+    public static bool GetOtpFromUser(string message, string otpLabel, string hint, out string otp)
+    {
+      CheckInteractor();
+
+      return userInteractor.Value.GetOtp(message, otpLabel, hint, out otp);
+    }
+
+    /// <summary>
+    /// Проверить наличие объекта взаимодействия с пользователем.
+    /// </summary>
+    private static void CheckInteractor()
+    {
+      if (userInteractor?.Value == null)
+        throw new NullReferenceException("UserInteractor has no implementation.");
     }
   }
 }

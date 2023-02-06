@@ -59,7 +59,7 @@ namespace Sungero.Plugins.Sdk
     /// </summary>
     private static void CheckCache()
     {
-      if (Cache.Value == null)
+      if (Cache?.Value == null)
         throw new NullReferenceException("Cache was not set.");
     }
   }

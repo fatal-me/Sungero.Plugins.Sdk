@@ -18,5 +18,15 @@ namespace Sungero.Plugins.Sdk
     /// <param name="isCacheValueUsed">Использовано значение из кеша.</param>
     /// <returns>True, если ПИН-код успешно получен, иначе - false.</returns>
     bool GetPin(Guid pluginId, string thumbprint, bool isForced, bool showWrongPinHint, out string pin, out bool isCacheValueUsed);
+
+    /// <summary>
+    /// Получить одноразовый пароль (OTP) от пользователя.
+    /// </summary>
+    /// <param name="message">Сообщение, отображаемое пользователю.</param>
+    /// <param name="otpLabel">Заголовок поля ввода OTP (если указана пустая строка, то поле ввода не показывается).</param>
+    /// <param name="hint">Подсказка, отображаемая пользователю (например, если ранее был введен неверный OTP).</param>
+    /// <param name="otp">Одноразовый пароль.</param>
+    /// <returns>True, если одноразовый пароль успешно получен, иначе - false.</returns>
+    bool GetOtp(string message, string otpLabel, string hint, out string otp);
   }
 }

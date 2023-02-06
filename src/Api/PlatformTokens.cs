@@ -31,7 +31,7 @@ namespace Sungero.Plugins.Sdk
     /// <returns>Токен платформы.</returns>
     public static string CreateToken(string audience, TimeSpan lifeTime, IReadOnlyDictionary<string, string> claims = null)
     {
-      if (internalTokenProvider is null)
+      if (internalTokenProvider?.Value is null)
       {
         throw new ArgumentException("No token provider.");
       } 
