@@ -54,6 +54,21 @@ namespace Sungero.Plugins.Sdk
     }
 
     /// <summary>
+    /// Показать пользователю диалог с изображением.
+    /// </summary>
+    /// <param name="title">Заголовок.</param>
+    /// <param name="message">Сообщение, отображаемое пользователю.</param>
+    /// <param name="image">Данные изображения.</param>
+    /// <param name="imageMimeType">MIME-Type изображения.</param>
+    /// <returns>True, если пользователь нажал OK в диалоге, иначе - false.</returns>
+    public static bool ShowImageToUser(string title, string message, byte[] image, string imageMimeType)
+    {
+      CheckInteractor();
+
+      return userInteractor.Value.ShowImage(title, message, image, imageMimeType);
+    }
+
+    /// <summary>
     /// Проверить наличие объекта взаимодействия с пользователем.
     /// </summary>
     private static void CheckInteractor()
